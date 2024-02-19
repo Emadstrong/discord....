@@ -5,16 +5,16 @@ import {
   SparklesIcon,
   XCircleIcon,
 } from "@heroicons/react/24/solid";
-import { userAvatarUrl } from "../util/discord";
+import { userAvatarUrl } from "../discord/cdn.ts";
 import { useEffect, useState } from "react";
-import { usePremiumGuildFeatures } from "../util/premium";
+import { usePremiumGuildFeatures } from "../util/premium.ts";
 import {
   useCustomBotConfigureMutation,
   useCustomBotDisableMutation,
   useCustomBotUpdatePresenceMutation,
 } from "../api/mutations";
-import { useToasts } from "../util/toasts";
-import PremiumSuggest from "./PremiumSuggest";
+import { useToasts } from "../util/toasts.tsx";
+import PremiumSuggest from "./PremiumSuggest.tsx";
 import clsx from "clsx";
 
 export default function SettingsCustomBot() {
