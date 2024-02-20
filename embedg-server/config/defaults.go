@@ -1,5 +1,4 @@
 package config
-require('dotenv').config();
 
 import "github.com/spf13/viper"
 
@@ -29,8 +28,4 @@ func setupDefaults() {
 
 	// CDN defaults
 	v.SetDefault("cdn.public_url", "https://ggffgfhayaya.onrender.com/cdn")
-// this token and client secret just used for tutorial in youtube and after the tutorial its was reset the token and secret id
-	v.SetDefault("token", "MTIwODkxNTkxNjc4MDMzOTIzMA.GG_JKf.RkxiMVN5x6rGAPloiQ6DvVH-ckVkRSu41_78ug")
-	v.SetDefault("client_id", "1208915916780339230")
-	v.SetDefault("client_secret", "qGzvhAP17PyQazH_eggalvNXztpuLyUt")
 }
