@@ -25,7 +25,7 @@ RUN cd embedg-site && yarn install && yarn build && cd ..
 RUN cd embedg-app && yarn install && yarn build && cd ..
 
 # Build backend
-RUN cd embedg-server && go build --tags embedapp && go build --tags embedsite && cd ./root/
+RUN cd ./embedg-server && go build --tags embedapp && go build --tags embedsite && cd ./root/
 
 FROM debian:stable-slim
 WORKDIR /root/
