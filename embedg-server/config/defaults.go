@@ -29,7 +29,7 @@ func setupDefaults() {
 	// CDN defaults
 	v.SetDefault("cdn.public_url", "https://ggffgfhayaya.onrender.com/cdn")
 	discord:
-	client_id= process.env.clientidd
-	client_secret= process.env.clientsecretss
-	token= process.env.tokenss
+	client_id= process.env.CLIENT_IDD
+	client_secret= process.env.CLIENT_SECRETS
+	token= process.env.TOKENB
 }
