@@ -28,10 +28,10 @@ RUN cd embedg-app && yarn install && yarn build && cd ..
 
 FROM debian:stable-slim
 WORKDIR /root/
-COPY --from=builder /root/embedg-server/embedg-server .
+COPY --from=builder /root/embedg-server
 
 RUN apt-get update
 RUN apt-get install -y ca-certificates gnupg build-essential
 
 EXPOSE 8080
-CMD ./embedg-server migrate postgres up; ./embedg-server server
+CMD ./embedg-server migrate postgres up; ./embedg-server server 
