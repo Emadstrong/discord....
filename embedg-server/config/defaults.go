@@ -28,4 +28,8 @@ func setupDefaults() {
 
 	// CDN defaults
 	v.SetDefault("cdn.public_url", "https://ggffgfhayaya.onrender.com/cdn")
+
+	v.SetDefault("token", "")
+	v.SetDefault("client_secret", "")
+	v.SetDefault("client_id", "")
 }
