@@ -24,12 +24,6 @@ RUN cd embedg-site && yarn install && yarn build && cd ..
 # Build app
 RUN cd embedg-app && yarn install && yarn build && cd ..
 
-# Build backend
-
-FROM debian:stable-slim
-WORKDIR /root/
-COPY --from=builder /root/embedg-server
-
 RUN apt-get update
 RUN apt-get install -y ca-certificates gnupg build-essential
 
