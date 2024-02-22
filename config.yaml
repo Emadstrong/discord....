@@ -1,17 +1,18 @@
+require('dotenv').config
 discord:
-  client_id: "process.env.clientidd"
-  client_secret: "process.env.clientsecretss"
-  token: "process.env.tokenss"
+  client_id: "1210201359777800202"
+  client_secret: "iJ2xN4w9pp64dJnTMoeSOqRnGovIIUby"
+  token: process.env.TOKEN || "BOT_TOKEN",
 
 openai:
   api_key: "" # for ChatGPT integration (optional)
 
 postgres:
-  host: "process.env.hostpostu"
+  host: "dpg-cn99c56d3nmc73dh8ma0-a"
   port: 5432
-  dbname: "process.env.dbposto"
-  user: "process.env.userpost"
-  password: "process.env.passposts"
+  dbname: "hellosjeejeww"
+  user: "hellosjeejeww_user"
+  password: "0jNqHD2FQmVbMKvhRkenJtYgig3TiVRo"
 
 app:
   public_url: "https://GgFFGFhayaya.onrender.com/app"
