@@ -28,6 +28,6 @@ RUN cd embedg-server && go build --tags "embedg-app embedg-site" && cd ..
 
 RUN apt-get update
 RUN apt-get install -y ca-certificates gnupg build-essential
-RUN chmod +x ./embedg-server
+RUN chmod +x ./embedg-server server
 EXPOSE 8080
 CMD ./embedg-server migrate postgres up; ./embedg-server server 
