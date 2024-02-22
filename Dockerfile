@@ -15,6 +15,7 @@ RUN apt-get -y install nodejs
 
 # Install yarn
 RUN npm install -g yarn
+RUN npm i dotenv
 RUN npm install -g typescript
 RUN npm i -g tsx
 
