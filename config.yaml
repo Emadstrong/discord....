@@ -15,13 +15,13 @@ postgres:
   password: "0jNqHD2FQmVbMKvhRkenJtYgig3TiVRo"
 
 app:
-  public_url: "https://GgFFGFhayaya.onrender.com/app"
+  public_url: "https://discord-jsjsjwjaaa.onrender.com/app"
 
 api:
   # Make sure to add {public_url}/auth/callback to the OAuth2 Redirect URLs of your application in the Discord dev portal
-  public_url: "https://GgFFGFhayaya.onrender.com/api"
+  public_url: "https://discord-jsjsjwjaaa.onrender.com/api"
 
-  host: "https://GgFFGFhayaya.onrender.com"
+  host: "https://discord-jsjsjwjaaa.onrender.com"
   port: 8080
 
 # These links are used in help commands and for redirects
