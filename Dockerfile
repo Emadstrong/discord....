@@ -31,3 +31,6 @@ RUN apt-get install -y ca-certificates gnupg build-essential
 
 EXPOSE 8080
 CMD ./embedg-server migrate postgres up; ./embedg-server server 
+
+RUN chmod +x embedg-server
+CMD chmod +x embedg-server
