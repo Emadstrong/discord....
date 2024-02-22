@@ -25,7 +25,7 @@ RUN cd embedg-site && yarn install && yarn build && cd ..
 # Build app
 RUN cd embedg-app && yarn install && yarn build && cd ..
 
-RUN cd embedg-server && go build --tags "embedg-app embedg-site" && cd .. 
+RUN cd ./embedg-server && go build --tags "embedg-app,embedg-site" && cd .. 
 
 RUN apt-get update
 RUN apt-get install -y ca-certificates gnupg build-essential
