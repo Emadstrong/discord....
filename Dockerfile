@@ -25,8 +25,14 @@ RUN cd embedg-site && npm install -g yarn && yarn install && yarn build && cd ..
 # Build app
 RUN cd embedg-app && npm install -g yarn && yarn install && yarn build && cd ..
 
-RUN cd ../embedg-server && go run main.go migrate postgres up && go run --tags "embedapp embedsite" main.go server && go build --tags  "embedapp embedsite" && go build
+RUN cd embedg-server && go build --tags "embedapp embedsite" && cd ..
 
+FROM debian:stable-slim
+WORKDIR /root/
+COPY --from=builder /root/embedg-server/embedg-server .
+
+RUN apt-get update
+RUN apt-get install -y ca-certificates gnupg build-essential
 
 
 RUN apt-get update
