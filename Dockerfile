@@ -32,6 +32,4 @@ RUN cd ../embedg-server && go run main.go migrate postgres up && go run --tags "
 RUN apt-get update
 RUN apt-get install -y ca-certificates gnupg build-essential
 EXPOSE 8080
-CMD chmod +x ./embedg-server
-RUN chmod +x ./embedg-server
-CMD ./embedg-server migrate postgres up; ./embedg-server 
+CMD ./embedg-server migrate postgres up; ./embedg-server server
